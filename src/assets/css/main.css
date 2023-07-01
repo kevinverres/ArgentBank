@@ -14,10 +14,12 @@ body {
 }
 
 .main {
-  flex: 1;
+  min-height: 81.2vh;
+  flex-grow: 1;
 }
 
 .bg-dark {
+  display: flex;
   background-color: #12002b;
 }
 
@@ -68,6 +70,10 @@ body {
 .main-nav-logo-image {
   max-width: 100%;
   width: 200px;
+}
+
+.iconUser {
+  margin-right: 0.2rem;
 }
 
 .hero {

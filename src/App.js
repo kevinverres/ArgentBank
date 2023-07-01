@@ -22,7 +22,7 @@ function App() {
               />
             }
           />
-          <Route path="/login" element={<Connexion />} />
+          <Route path="/login" element={<Connexion logo={logo}/>} />
         </Routes>
       </Router>
     </div>
