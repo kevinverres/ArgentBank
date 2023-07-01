@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import logo from "./assets/img/argentBankLogo.png";
+import iconChat from "./assets/img/icon-chat.png";
+import iconMoney from "./assets/img/icon-money.png";
+import iconSecurity from "./assets/img/icon-security.png";
+import Home from "./pages/Home";
+import Connexion from "./pages/Connexion";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Home
+                logo={logo}
+                chat={iconChat}
+                money={iconMoney}
+                security={iconSecurity}
+              />
+            }
+          />
+          <Route path="/login" element={<Connexion />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
