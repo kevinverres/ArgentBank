@@ -15,6 +15,7 @@ body {
 
 .main {
   min-height: 81.2vh;
+  /* height: 590px; */
   flex-grow: 1;
 }
 

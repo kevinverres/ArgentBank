@@ -3,8 +3,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
 import Footer from "../component/Footer";
 import Header from "../component/Header";
+import { setDocTitle } from "../service/function";
 
 export default function Connexion({ logo }) {
+  setDocTitle('Argent Bank - Connexion Page')
   return (
     <>
       <Header logo={logo} />

@@ -5,6 +5,7 @@ import iconMoney from "./assets/img/icon-money.png";
 import iconSecurity from "./assets/img/icon-security.png";
 import Home from "./pages/Home";
 import Connexion from "./pages/Connexion";
+import Profile from "./pages/Profile";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             }
           />
           <Route path="/login" element={<Connexion logo={logo}/>} />
+          <Route path="/profile" element={<Profile logo={logo}/>} />
         </Routes>
       </Router>
     </div>

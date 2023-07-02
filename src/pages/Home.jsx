@@ -1,8 +1,10 @@
 import Footer from "../component/Footer";
 import Header from "../component/Header";
 import "../assets/css/main.css";
+import { setDocTitle } from "../service/function";
 
 export default function Home({ logo, chat, money, security }) {
+  setDocTitle('Argent Bank - Home Page')
   return (
     <>
       <Header logo={logo} />
