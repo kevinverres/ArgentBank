@@ -1,11 +1,16 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
 import { faSignOut } from "@fortawesome/free-solid-svg-icons";
+import { getUserProfile } from "../service/call";
+import { useSelector } from "react-redux";
+
 
 export default function Header({ logo }) {
-  const location = useLocation();
-  if (location.pathname === "/profile") {
+  const token = getUserProfile(localStorage.getItem("token"))
+
+  if (token === "token received") {
+    console.log(token)
     return (
       <nav className="main-nav">
         <Link className="main-nav-logo" to="/">
