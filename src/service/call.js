@@ -35,11 +35,10 @@ export async function getUserProfile(token) {
       bodyParameters,
       config
     );
-    return {
-      response : data.body
-    };
+
+    return data.body
   } catch (err) {
-    console.log(err.message);
+    // console.log(err.message);
     return "not found";
   }
 }
@@ -53,12 +52,11 @@ export async function postFormData(email, password) {
       { email: email, password: password }
     );
     const token = data.body.token;
-
-    localStorage.setItem("token", token);
-    return "token received";
+    
+    return token;
   } catch (err) {
-    console.log(err.message);
-    return "error";
+    // console.log(err.response.data.message);
+    return {err: "error", message: err.response.data.message};
   }
 }
 
@@ -66,7 +64,7 @@ export async function postFormData(email, password) {
 
 export async function createUser(email, password, firstName, lastName) {
   try {
-    const { data } = await axios.post(
+    await axios.post(
       URL_SINGUP,
       {
         email: email,
@@ -94,7 +92,7 @@ export async function modifyUser(firstName, lastName) {
   };
 
   try {
-    const { data } = await axios.put(
+    await axios.put(
       URL_PROFILE,
       bodyParameters,
       config

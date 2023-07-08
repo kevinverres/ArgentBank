@@ -1,3 +1,3 @@
-export const setDocTitle = async (text) => {
-    document.title = text;
+export const setDocTitle = (text) => {
+  document.title = text;
 };
