@@ -38,7 +38,6 @@ export async function getUserProfile(token) {
 
     return data.body
   } catch (err) {
-    // console.log(err.message);
     return "not found";
   }
 }
@@ -55,7 +54,6 @@ export async function postFormData(email, password) {
     
     return token;
   } catch (err) {
-    // console.log(err.response.data.message);
     return {err: "error", message: err.response.data.message};
   }
 }
@@ -81,14 +79,14 @@ export async function createUser(email, password, firstName, lastName) {
 
 // MODIFY A USER
 
-export async function modifyUser(firstName, lastName) {
-  const token = localStorage.getItem("token");
+export async function modifyUser(token, firstName, lastName, update) {
   const config = {
     headers: { Authorization: `Bearer ${token}` },
   };
   const bodyParameters = {
     firstName: firstName,
     lastName: lastName,
+    updatedAt: update,
   };
 
   try {
@@ -97,7 +95,8 @@ export async function modifyUser(firstName, lastName) {
       bodyParameters,
       config
     );
+    return "Current user successfully changed"
   } catch (err) {
-    console.log(err.message);
+    return err.response.data.message
   }
 }

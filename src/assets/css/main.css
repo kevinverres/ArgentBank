@@ -283,6 +283,37 @@ body {
   color: #fff;
 }
 
+.edit-div {
+  display: none;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 0 auto;
+  background-color: #fff;
+  color: #2c3e50;
+  padding: 0.5rem;
+  justify-content: flex-start;
+}
+
+.edit-div label {
+  width:min-content;
+}
+
+.edit-divBtn {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.edit-divBtn button {
+  padding: 0.5rem;
+  width: 100px;
+  border-color: #00bc77;
+  background-color: #00bc77;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+}
+
 @media (min-width: 720px) {
   .account {
     flex-direction: row;
