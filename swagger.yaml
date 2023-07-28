@@ -135,7 +135,7 @@ paths:
         '200':
           description: Account data retrieved successully
           schema:
-            $ref: '#/definitions/AccountResponse'
+            $ref: '#/definitions/Transaction'
         '400':
           description: Invalid Fields
         '500':
@@ -163,7 +163,7 @@ paths:
         '200':
           description: Account data retrieved successully
           schema:
-            $ref: '#/definitions/AccountResponse'
+            $ref: '#/definitions/Transaction'
         '400':
           description: Invalid Fields
         '500':
@@ -189,14 +189,14 @@ paths:
           description: data for updating a user transaction
           required: true
           schema:
-            $ref: '#/definitions/AccountResponse'
+            $ref: '#/definitions/Transaction'
       produces:
       - application/json
       responses:
         '200':
           description: Account data retrieved successully
           schema:
-            $ref: '#/definitions/AccountResponse'
+            $ref: '#/definitions/Transaction'
         '400':
           description: Invalid Fields
         '500':
@@ -229,7 +229,7 @@ paths:
         '200':
           description: Account data retrieved successully
           schema:
-            $ref: '#/definitions/AccountResponse'
+            $ref: '#/definitions/Transaction'
         '400':
           description: Invalid Fields
         '500':
@@ -260,14 +260,14 @@ paths:
           description: data for updating a user transaction
           required: true
           schema:
-            $ref: '#/definitions/AccountResponse'
+            $ref: '#/definitions/Transaction'
       produces:
       - application/json
       responses:
         '200':
           description: Account data retrieved successully
           schema:
-            $ref: '#/definitions/AccountResponse'
+            $ref: '#/definitions/Transaction'
         '400':
           description: Invalid Fields
         '500':
@@ -326,14 +326,14 @@ paths:
           name: data
           description: data for updating a user transaction
           schema:
-            $ref: '#/definitions/AccountResponse'
+            $ref: '#/definitions/Transaction'
       produces:
       - application/json
       responses:
         '200':
           description: Account data retrieved successully
           schema:
-            $ref: '#/definitions/AccountResponse'
+            $ref: '#/definitions/Transaction'
         '400':
           description: Invalid Fields
         '500':
@@ -393,7 +393,7 @@ definitions:
         type: string
       lastName:
         type: string
-  AccountResponse:
+  Transaction:
     type: object
     properties:
       transactionId:
